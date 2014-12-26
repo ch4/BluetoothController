@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
@@ -8,20 +8,49 @@
         android:id="@+id/button_start_discovery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/start_discovery" />
+        android:text="@string/start_discovery"
+        android:visibility="gone"/>
     <Button
         android:id="@+id/button_bonded_devices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bonded_devices" />
+        android:text="@string/bonded_devices"
+        android:visibility="gone"/>
     <Button
         android:id="@+id/button_listen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/listen" />
+        android:text="Activate" android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+        android:visibility="gone"/>
     <Button
         android:id="@+id/button_stop_listening"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/stop_listening" />
-</LinearLayout>
+        android:text="Deactivate"
+        android:layout_alignParentTop="true" android:layout_toRightOf="@+id/button_listen"
+        android:visibility="gone"/>
+    <Button
+            android:id="@+id/send_unholstered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Unholstered"
+            android:visibility="gone"/>
+    <Button
+            android:id="@+id/send_holstered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Holstered"
+            android:visibility="gone"/>
+    <Button
+            android:id="@+id/toggle_holster_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toggle Holster State"
+            android:layout_below="@+id/button_start_discovery" android:layout_centerHorizontal="true"/>
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/holster_state_indicator" android:background="#ff00ff00"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/toggle_holster_state"/>
+</RelativeLayout>

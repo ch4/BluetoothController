@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string
-        name="app_name">Bluetooth Controller</string>
+        name="app_name">Biocom Holster Emulator</string>
     <string
         name="listen">Listen</string>
     <string

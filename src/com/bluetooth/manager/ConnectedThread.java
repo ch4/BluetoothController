@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import android.util.Log;
 import com.bluetooth.manager.tools.Logger;
 
 import android.bluetooth.BluetoothSocket;
@@ -31,6 +32,10 @@ public class ConnectedThread extends Thread
         {
             is = bluetoothSocket.getInputStream();
             os = bluetoothSocket.getOutputStream();
+
+//            byte[] readBytes = new byte[READ_BUFFER_SIZE];
+//            is.read(readBytes);
+//            Log.d("SensorManager", new String(readBytes));
         }
         catch (IOException e)
         {
